@@ -1,0 +1,28 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "trademinator/indicators",
+    "description": "Framework-agnostic BCMath technical indicators, candlestick patterns and CCXT OHLCV normalization.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["indicators", "technical-analysis", "ohlcv", "ccxt", "bcmath"],
+    "require": {
+        "php": ">=8.2",
+        "ext-bcmath": "*",
+        "ext-ctype": "*",
+        "trademinator/bcmath": "^0.1.0"
+    },
+    "suggest": {
+        "ccxt/ccxt": "Fetch exchange OHLCV candles to normalize and analyze."
+    },
+    "autoload": {
+        "psr-4": {"Trademinator\\Indicators\\": "src/"},
+        "files": ["src/functions.php"]
+    },
+    "scripts": {
+        "test": "@php tests/run.php",
+        "lint": "@php tests/lint.php"
+    },
+    "config": {"sort-packages": true},
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
